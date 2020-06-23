@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Net_MVC_Otopark.Models.Arac>
+
+@{
+    ViewBag.Title = "TumListe";
+}
+
+<h2>Tum Giriş Çıkış Listesi</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Araç Plakası")
+        </th>
+        <th>
+            @Html.DisplayName("Giriş Tarihi")
+        </th>
+        <th>
+            @Html.DisplayName("Araç Durum")
+        </th>
+        <th>
+            @Html.DisplayName("Çıkış Tarihi")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AracPlakası)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AracGirisTarihi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AracAktiflik)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AracCikisTarihi)
+        </td>
+        <td>
+           
+        </td>
+    </tr>
+}
+
+</table>

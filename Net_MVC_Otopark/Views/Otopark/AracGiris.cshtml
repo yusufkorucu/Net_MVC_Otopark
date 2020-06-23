@@ -1,0 +1,44 @@
+﻿@model Net_MVC_Otopark.Models.Arac
+
+@{
+    ViewBag.Title = "AracGiris";
+}
+
+<h2>Araç Giriş</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4></h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label("Araç Plakası", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AracPlakası, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AracPlakası, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <h2 class="alert-danger">@ViewBag.HataMesaj</h2>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Ekle" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Otopark Araç Listesine Geri Dön", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

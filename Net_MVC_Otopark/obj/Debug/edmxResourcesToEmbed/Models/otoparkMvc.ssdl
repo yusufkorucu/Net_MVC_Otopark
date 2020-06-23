@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBOtoparkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Arac">
+    <Key>
+      <PropertyRef Name="AracID" />
+    </Key>
+    <Property Name="AracID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AracPlakası" Type="nvarchar" MaxLength="50" />
+    <Property Name="AracGirisTarihi" Type="datetime" />
+    <Property Name="AracAktiflik" Type="bit" />
+    <Property Name="AracCikisTarihi" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="DBOtoparkModelStoreContainer">
+    <EntitySet Name="Arac" EntityType="Self.Arac" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

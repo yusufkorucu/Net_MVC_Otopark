@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBOtoparkModelStoreContainer" CdmEntityContainer="DBOtoparkEntities">
+    <EntitySetMapping Name="Arac">
+      <EntityTypeMapping TypeName="DBOtoparkModel.Arac">
+        <MappingFragment StoreEntitySet="Arac">
+          <ScalarProperty Name="AracID" ColumnName="AracID" />
+          <ScalarProperty Name="AracPlakası" ColumnName="AracPlakası" />
+          <ScalarProperty Name="AracGirisTarihi" ColumnName="AracGirisTarihi" />
+          <ScalarProperty Name="AracAktiflik" ColumnName="AracAktiflik" />
+          <ScalarProperty Name="AracCikisTarihi" ColumnName="AracCikisTarihi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

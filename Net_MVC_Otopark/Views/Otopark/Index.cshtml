@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Net_MVC_Otopark.Models.Arac>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Otopark Arac Listesi</h2>
+
+<p>
+    @Html.ActionLink("Yeni Araç Girisi", "AracGiris")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Arac Plakası")
+        </th>
+        <th>
+            @Html.DisplayName("Giris Tarihi")
+        </th>
+   
+        <th>İşlemler</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AracPlakası)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AracGirisTarihi)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Araç Çıkış", "AracCikis", new { id=item.AracID }) 
+        </td>
+    </tr>
+}
+
+
+</table>
